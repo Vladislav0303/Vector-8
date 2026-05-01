@@ -12,32 +12,33 @@ public class Main{
             throw new NegativeSizeOfArray("Не вірний розмір");
         }
         vector.mass = new int[size * 2];
+            System.out.println("Введіть число яке хочете додати в кінець: ");
+            int el = sc.nextInt();
+            vector.Add_Element_In_End(el);
+            vector.get();
+            sc.nextLine();System.out.println("Введіть число яке хочете додати в середину: ");
+            int el1 = sc.nextInt();
+            vector.Add_Element_In_Between(el1);
+            vector.get();
+            sc.nextLine();
+            System.out.println("Введіть число яке хочете додати в початок: ");
+            int el2 = sc.nextInt();
+            vector.Add_Element_In_Start(el2);
+            vector.get();
         for (int i = 0; i < vector.mass.length; i++) {
             while (i < vector.mass.length / 2) {
+                if(vector.mass[i] == 0) {
                 System.out.println("~Введіть значення яке хочете записати~");
                 System.out.println("Значення: ");
-                int el = sc.nextInt();
+                int element = sc.nextInt();
                 sc.nextLine();
-                vector.mass[i] = el;
+                vector.mass[i] = element;
                 i++;
                 vector.get();
             }
+                i++;
+            }
         }
-        System.out.println("Введіть число яке хочете додати в кінець: ");
-        int el = sc.nextInt();
-        vector.Add_Element_In_End(el);
-        vector.get();
-        sc.nextLine();
-        System.out.println("Введіть число яке хочете додати в середину: ");
-        int el1 = sc.nextInt();
-        vector.Add_Element_In_Between(el1);
-        vector.get();
-        sc.nextLine();
-        System.out.println("Введіть число яке хочете додати в початок: ");
-        int el2 = sc.nextInt();
-        vector.Add_Element_In_Start(el2);
-        vector.get();
-        sc.nextLine();
         vector.Add_Element();
         System.out.println("Введіть елемент який хочете видалити за індексом: ");
         int el3 = sc.nextInt();
